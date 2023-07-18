@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <title>Neumorphic Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            margin: 50px auto;
+            width: 300px;
+            background-color: #f2f2f2;
+            border-radius: 20px;
+            box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+            overflow: hidden;
+        }
+
+        .display {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: right;
+        }
+
+        .display input[type="text"] {
+            background-color: #f2f2f2;
+            border: none;
+            font-size: 30px;
+            height: 50px;
+            width: 100%;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        button {
+            background-color: #f2f2f2;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+            color: #333;
+            cursor: pointer;
+            font-size: 20px;
+            height: 50px;
+            outline: none;
+            transition: all 0.2s ease-in-out;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #e6e6e6;
+            box-shadow: 2px 2px 5px #d9d9d9, -2px -2px 5px #ffffff;
+        }
+
+        .operator {
+            background-color: #668cff;
+            color: #fff;
+        }
+
+        .zero {
+            grid-column: 1 / span 2;
+        }
+
+        @media screen and (max-width: 600px) {
+            .calculator {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="result" readonly>
+        </div>
+        <div class="buttons">
+            <button class="operator" onclick="clearResult()">C</button>
+            <button class="operator" onclick="backspace()">Del</button>
+                    <button class="operator" onclick="insert('%')">%</button>
+                    <button class="operator" onclick="insert('/')">÷</button>
+                    <button onclick="insert('7')">7</button>
+                    <button onclick="insert('8')">8</button>
+                    <button onclick="insert('9')">9</button>
+                    <button class="operator" onclick="insert('*')">x</button>
+                    <button onclick="insert('4')">4</button>
+                    <button onclick="insert('5')">5</button>
+                    <button onclick="insert('6')">6</button>
+                    <button class="operator" onclick="insert('-')">-</button>
+                    <button onclick="insert('1')">1</button>
+                    <button onclick="insert('2')">2</button>
+                    <button onclick="insert('3')">3</button>
+                    <button class="operator" onclick="insert('+')">+</button>
+                    <button class="zero" onclick="insert('0')">0</button>
+                    <button onclick="insert('.')">.</button>
+                    <button class="operator" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script>
+        function insert(num) {
+            document.getElementById('result').value += num;
+        }
+
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+
+        function backspace() {
+            var result = document.getElementById('result').value;
+            document.getElementById('result').value = result.substring(0, result.length - 1);
+        }
+
+        function calculate() {
+            var result = document.getElementById('result').value;
+            if (result) {
+                document.getElementById('result').value = eval(result);
+            }
+        }
+    </script>
+</body>
+
+</html>

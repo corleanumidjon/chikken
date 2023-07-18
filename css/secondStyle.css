@@ -1,0 +1,136 @@
+.home-page {
+    display: flex;
+}
+
+.leftscreen {
+    display: inline-block;
+    width: 35%;
+}
+
+.leftscreen-main {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    text-align: center;
+    display: block;
+    width: 94%;
+    height: 250vh;
+    background: #FFFFFF;
+    box-shadow: 0px 5.84756px 36.5472px -7.30945px rgba(0, 0, 0, 0.25);
+    border-radius: 23.3902px;
+}
+
+.rightscreen {
+    display: inline-block;
+    width: 64%;
+}
+
+
+.center img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.tcm {
+    text-align: center;
+}
+
+.card_main_name_product {
+    font-size: 1.5rem;
+}
+
+.productinc {
+    padding-top: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.productinc h2 {
+    padding: 0px 10px 0 10px;
+}
+
+
+#productcount {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.bolder {
+    font-weight: bold;
+}
+
+.calcbar {
+    position: fixed;
+    top: 0;
+    /* left: 250; */
+    right: 250;
+    /* bottom: 0; */
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--light);
+    transition: 0.5s;
+    z-index: 999;
+    border: 3px solid red;
+}
+
+.checkout-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    /* height: 250px; */
+    margin: 10px auto;
+}
+
+.checkout-card p {
+    text-align: left;
+}
+
+.checkout-product-imgage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: 25px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+}
+
+.checkout-product-imgage img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.checkout-product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.navbar-products-buttons {
+    margin-left: 20px;
+}
+
+.value-products h4 {
+    display: inline;
+}
+
+
+#value-products-h4-left {
+    padding-left: 20px;
+} 
+
+#checkout-button {
+    padding-left: 50px;
+    padding-right: 50px;
+}
